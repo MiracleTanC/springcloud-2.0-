@@ -158,5 +158,7 @@
 		<module>warmercloud-provider-blog</module>
 		<module>warmercloud-customer-blog</module>
 		<module>warmercloud-eureka-server</module>
+		<module>warmercloud-eureka-server7002</module>
+		<module>warmercloud-eureka-server7003</module>
 	</modules>
 </project>

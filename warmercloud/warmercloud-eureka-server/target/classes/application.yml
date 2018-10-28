@@ -3,9 +3,10 @@ server:
   
 eureka:
   instance:
-    hostname: localhost #eureka服务端的实例名称
+    hostname: eureka7001.com #eureka服务端的实例名称 windows环境可自行修改C:\Windows\System32\drivers\etc下hosts文件修改域名映射
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url: 
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/   #单机    #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。     
+      defaultZone: http://eureka7002.com:7003/eureka/,http://eureka7003.com:7003/eureka/
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/   #单机    #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。     
