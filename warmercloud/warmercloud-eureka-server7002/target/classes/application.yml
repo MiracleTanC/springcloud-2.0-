@@ -3,7 +3,7 @@ server:
   
 eureka:
   instance:
-    hostname: eureka7002.com #eureka服务端的实例名称  可自行修改system32下的etc修改域名映射
+    hostname: eureka7002.com #eureka服务端的实例名称  windows环境可自行修改C:\Windows\System32\drivers\etc下hosts文件修改域名映射
   client:
     register-with-eureka: false
     fetch-registry: false
