@@ -3,6 +3,9 @@ server:
 spring:
    application:
     name: warmercloud-fegin-customer
+feign: 
+  hystrix: 
+    enabled: true
 eureka:
   client:
     register-with-eureka: false
