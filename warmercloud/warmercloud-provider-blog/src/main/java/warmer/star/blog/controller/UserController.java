@@ -18,13 +18,13 @@ public class UserController extends BaseController {
 	@Autowired
 	private UserService userService;
 	
-	@GetMapping("/getUser/{code}")
+	@GetMapping("/getuser/{code}")
 	public UserInfo getUser(@PathVariable("code") String code) {
 		UserInfo userInfo = userService.getUserInfo(code);
 		return userInfo;
 	}
 
-	@PostMapping("/saveUserInfo")
+	@PostMapping("/saveuserinfo")
 	public R saveUserInfo(UserInfo submitItem) {
 		try {
 			if (submitItem.getUserId() <= 0) {

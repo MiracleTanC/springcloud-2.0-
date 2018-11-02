@@ -21,8 +21,5 @@ public class UserController {
 	public Object serverdiscovery(){
 		return blogService.serverdiscovery();
 	}
-	@RequestMapping(value = "/search/getsearchlist")
-	public Object getsearchlist(){
-		return blogService.getsearchlist();
-	}
+
 }

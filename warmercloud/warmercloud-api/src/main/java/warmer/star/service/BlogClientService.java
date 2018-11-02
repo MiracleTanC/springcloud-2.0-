@@ -5,12 +5,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import warmer.star.entity.UserInfo;
-@FeignClient(value="WARMERCLOUD-SEARCH")
+@FeignClient(value="WARMERCLOUD-BLOG")
 public interface BlogClientService {
 	@RequestMapping(value = "/user/getuser/{code}")
 	public UserInfo getuser(@PathVariable("code") String code);
 	@RequestMapping(value = "/user/serverdiscovery")
 	public Object serverdiscovery();
-	@RequestMapping(value = "/search/getsearchlist")
-	public Object getsearchlist();
+
 }
