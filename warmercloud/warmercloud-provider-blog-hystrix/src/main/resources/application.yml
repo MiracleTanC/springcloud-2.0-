@@ -21,7 +21,16 @@ spring:
       initial-size: 5                                       # 初始化连接数
       max-total: 5                                          # 最大连接数
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
-      
+#在 spring boot 升为 2.0 后，为了安全，默认 Actuator 只暴露了2个端点，heath 和 info 
+#下面配置是用来暴露 Actuator 的所有端点的，这一点很重要，不配置你的 Hystrix Dashboard 会出现 Unable to connect to Command Metric Stream 的问题
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   
+  endpoint:
+      health:
+        show-details: ALWAYS      
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url: 
